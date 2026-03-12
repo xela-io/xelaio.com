@@ -10,6 +10,7 @@ type Props = CollectionEntry<'blog'>['data'] & { id?: string };
 const { title, description, pubDate, updatedDate, id } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="de">
 	<head>
 		<BaseHead title={`${title} - over-cloud.de`} description={description} />

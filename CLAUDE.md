@@ -36,11 +36,10 @@ pubDate: 2026-03-12
 
 ## Farbpalette
 
-- `--amber: #99621e`
-- `--tan: #d38b5d`
-- `--cream: #f3ffb6`
-- `--sage: #739e82`
-- `--forest: #2c5530`
+- `--grey: #BFC6C4`
+- `--cream: #E8E2D8`
+- `--green: #6F8F72`
+- `--orange: #F2A65A`
 
 ## Lokale Entwicklung
 

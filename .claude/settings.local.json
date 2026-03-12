@@ -16,7 +16,12 @@
       "Bash(ssh xela@46.224.208.7 \"docker network connect matrix_matrix-external over-cloud-de\" 2>&1)",
       "Bash(ssh xela@46.224.208.7 \"docker inspect matrix-caddy --format '{{range .Mounts}}{{.Source}} -> {{.Destination}}{{println}}{{end}}'\" 2>&1)",
       "Bash(ssh xela@46.224.208.7 \"docker exec matrix-caddy caddy reload --config /etc/caddy/Caddyfile\" 2>&1)",
-      "Bash(curl -s -o /dev/null -w '%{http_code}' https://over-cloud.de 2>&1)"
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://over-cloud.de 2>&1)",
+      "Bash(scp -r /home/agents/shared/over-cloud.de/src /home/agents/shared/over-cloud.de/Dockerfile /home/agents/shared/over-cloud.de/nginx.conf /home/agents/shared/over-cloud.de/docker-compose.yml /home/agents/shared/over-cloud.de/package*.json /home/agents/shared/over-cloud.de/astro.config.mjs /home/agents/shared/over-cloud.de/tsconfig.json /home/agents/shared/over-cloud.de/public xela@46.224.208.7:~/over-cloud.de/ 2>&1 && ssh xela@46.224.208.7 \"cd ~/over-cloud.de && docker compose up -d --build\" 2>&1)",
+      "Bash(scp /home/agents/shared/over-cloud.de/docker-compose.yml xela@46.224.208.7:~/over-cloud.de/ 2>&1 && ssh xela@46.224.208.7 \"cd ~/over-cloud.de && docker compose up -d --force-recreate\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"cd ~/over-cloud.de && docker compose build --no-cache && docker compose up -d\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"ls ~/over-cloud.de/src/content/blog/\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"cd ~/over-cloud.de/src/content/blog && rm git-commit-messages.md kaffee-und-code.md terminal-setup.md warum-eigene-website.md weniger-tools.md && ls\" 2>&1)"
     ]
   }
 }

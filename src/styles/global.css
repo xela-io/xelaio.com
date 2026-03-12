@@ -1,17 +1,16 @@
 :root {
-	--amber: #99621e;
-	--tan: #d38b5d;
-	--cream: #f3ffb6;
-	--sage: #739e82;
-	--forest: #2c5530;
+	--grey: #BFC6C4;
+	--cream: #E8E2D8;
+	--green: #6F8F72;
+	--orange: #F2A65A;
 
 	--text: #2a2a2a;
 	--text-muted: #6b6b6b;
 	--bg: #fafaf7;
 	--bg-code: #f0efe9;
 	--border: #e0ddd5;
-	--accent: var(--forest);
-	--accent-hover: var(--sage);
+	--accent: var(--green);
+	--accent-hover: var(--orange);
 }
 
 [data-theme="dark"] {
@@ -20,8 +19,8 @@
 	--bg: #1a1a18;
 	--bg-code: #2a2a26;
 	--border: #3a3a35;
-	--accent: var(--sage);
-	--accent-hover: var(--cream);
+	--accent: var(--green);
+	--accent-hover: var(--orange);
 }
 
 *,
@@ -31,7 +30,7 @@
 }
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	font-family: 'Bricolage Grotesque', sans-serif;
 	margin: 0;
 	padding: 0;
 	background: var(--bg);
@@ -50,10 +49,11 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: 'Vollkorn', serif;
 	margin: 1.5em 0 0.5em 0;
 	color: var(--text);
 	line-height: 1.3;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 h1 { font-size: 2em; }
@@ -98,7 +98,7 @@ pre > code {
 }
 
 blockquote {
-	border-left: 3px solid var(--tan);
+	border-left: 3px solid var(--orange);
 	padding: 0 0 0 1.2em;
 	margin: 1.5em 0;
 	color: var(--text-muted);

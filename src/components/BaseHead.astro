@@ -18,6 +18,11 @@ const { title, description, image } = Astro.props;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link
@@ -62,4 +67,11 @@ const { title, description, image } = Astro.props;
 		return 'light';
 	})();
 	document.documentElement.setAttribute('data-theme', theme);
+
+	document.addEventListener('astro:before-swap', (e) => {
+		const current = document.documentElement.getAttribute('data-theme');
+		if (current) {
+			e.newDocument.documentElement.setAttribute('data-theme', current);
+		}
+	});
 </script>

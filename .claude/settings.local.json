@@ -4,7 +4,19 @@
       "WebFetch(domain:steipete.me)",
       "Bash(npm create:*)",
       "Bash(node --version && nvm ls && nvm install 22 2>&1)",
-      "Bash(curl -s http://localhost:4321 2>&1 | head -5)"
+      "Bash(curl -s http://localhost:4321 2>&1 | head -5)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(ssh xela@46.224.208.7 \"echo 'connected' && docker --version && docker compose version\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"cd ~ && git clone git@github.com:xela-io/over-cloud.de.git 2>&1 || \\(cd ~/over-cloud.de && git pull 2>&1\\)\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"git clone https://github.com/xela-io/over-cloud.de.git ~/over-cloud.de\" 2>&1)",
+      "Bash(scp -r /home/agents/shared/over-cloud.de/Dockerfile /home/agents/shared/over-cloud.de/nginx.conf /home/agents/shared/over-cloud.de/docker-compose.yml /home/agents/shared/over-cloud.de/package*.json /home/agents/shared/over-cloud.de/astro.config.mjs /home/agents/shared/over-cloud.de/tsconfig.json /home/agents/shared/over-cloud.de/src /home/agents/shared/over-cloud.de/public xela@46.224.208.7:~/over-cloud.de/ 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"cd ~/over-cloud.de && docker compose up -d --build\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"docker inspect matrix-caddy --format '{{range \\\\$k, \\\\$v := .NetworkSettings.Networks}}{{print \\\\$k \\\\\" \\\\\"}}{{end}}'\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"docker network connect matrix_matrix-external over-cloud-de\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"docker inspect matrix-caddy --format '{{range .Mounts}}{{.Source}} -> {{.Destination}}{{println}}{{end}}'\" 2>&1)",
+      "Bash(ssh xela@46.224.208.7 \"docker exec matrix-caddy caddy reload --config /etc/caddy/Caddyfile\" 2>&1)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://over-cloud.de 2>&1)"
     ]
   }
 }

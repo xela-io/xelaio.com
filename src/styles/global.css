@@ -1,0 +1,152 @@
+:root {
+	--amber: #99621e;
+	--tan: #d38b5d;
+	--cream: #f3ffb6;
+	--sage: #739e82;
+	--forest: #2c5530;
+
+	--text: #2a2a2a;
+	--text-muted: #6b6b6b;
+	--bg: #fafaf7;
+	--bg-code: #f0efe9;
+	--border: #e0ddd5;
+	--accent: var(--forest);
+	--accent-hover: var(--sage);
+}
+
+[data-theme="dark"] {
+	--text: #e0ddd5;
+	--text-muted: #9a9a8e;
+	--bg: #1a1a18;
+	--bg-code: #2a2a26;
+	--border: #3a3a35;
+	--accent: var(--sage);
+	--accent-hover: var(--cream);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-size: 17px;
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+main {
+	width: 680px;
+	max-width: calc(100% - 2rem);
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1.5em 0 0.5em 0;
+	color: var(--text);
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+
+a {
+	color: var(--accent);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+}
+
+a:hover {
+	color: var(--accent-hover);
+}
+
+p {
+	margin: 0 0 1.2em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 6px;
+}
+
+code {
+	padding: 2px 6px;
+	background: var(--bg-code);
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+pre {
+	padding: 1.2em;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+
+pre > code {
+	all: unset;
+}
+
+blockquote {
+	border-left: 3px solid var(--tan);
+	padding: 0 0 0 1.2em;
+	margin: 1.5em 0;
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2em 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 0.5em;
+	border-bottom: 1px solid var(--border);
+	text-align: left;
+}
+
+ul, ol {
+	padding-left: 1.5em;
+}
+
+li {
+	margin-bottom: 0.3em;
+}
+
+@media (max-width: 720px) {
+	body {
+		font-size: 16px;
+	}
+	main {
+		padding: 1.5rem 1rem;
+	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}

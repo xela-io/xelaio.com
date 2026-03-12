@@ -1,0 +1,33 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<p>&copy; {today.getFullYear()} over-cloud.de</p>
+	<p>
+		<a href="/rss.xml">RSS</a>
+	</p>
+</footer>
+
+<style>
+	footer {
+		border-top: 1px solid var(--border);
+		max-width: 680px;
+		margin: 2rem auto 0;
+		padding: 1.5rem 1rem;
+		color: var(--text-muted);
+		font-size: 0.85rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	footer p {
+		margin: 0;
+	}
+	footer a {
+		color: var(--text-muted);
+	}
+	footer a:hover {
+		color: var(--text);
+	}
+</style>

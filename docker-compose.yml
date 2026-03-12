@@ -3,5 +3,10 @@ services:
     build: .
     container_name: over-cloud-de
     restart: unless-stopped
-    ports:
-      - "8080:80"
+    networks:
+      - caddy
+
+networks:
+  caddy:
+    external: true
+    name: matrix_matrix-external

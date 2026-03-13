@@ -1,12 +1,12 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { SITE_NAME } from '../consts';
 
 const pathname = Astro.url.pathname;
 ---
 
 <header>
 	<nav>
-		<a href="/" class="site-title">{SITE_TITLE}</a>
+		<a href="/" class="site-title">{SITE_NAME}</a>
 		<div class="nav-links">
 			<a href="/about" class:list={[{ active: pathname === '/about/' }]}>About</a>
 			<button id="theme-toggle" aria-label="Theme wechseln">

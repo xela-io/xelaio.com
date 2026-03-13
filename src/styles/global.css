@@ -11,6 +11,7 @@
 	--border: #e0ddd5;
 	--accent: var(--green);
 	--accent-hover: var(--orange);
+	--dot-color: rgba(0, 0, 0, 0.07);
 }
 
 [data-theme="dark"] {
@@ -21,6 +22,7 @@
 	--border: #3a3a35;
 	--accent: var(--green);
 	--accent-hover: var(--orange);
+	--dot-color: rgba(255, 255, 255, 0.06);
 }
 
 *,
@@ -33,12 +35,15 @@ body {
 	font-family: 'Bricolage Grotesque', sans-serif;
 	margin: 0;
 	padding: 0;
-	background: var(--bg);
+	background:
+		radial-gradient(circle at 1px 1px, var(--dot-color) 0.5px, transparent 0),
+		var(--bg);
+	background-size: 20px 20px, auto;
 	color: var(--text);
 	font-size: 17px;
 	line-height: 1.7;
 	-webkit-font-smoothing: antialiased;
-	transition: background 0.2s ease, color 0.2s ease;
+	transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 main {

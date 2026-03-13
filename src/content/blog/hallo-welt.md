@@ -1,6 +1,6 @@
 ---
 title: 'Hallo Welt'
-description: 'Der erste Artikel auf over-cloud.de.'
+description: 'Der erste Artikel auf xelaio.com.'
 pubDate: 2026-03-12
 ---
 

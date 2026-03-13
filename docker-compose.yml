@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    container_name: over-cloud-de
+    container_name: xelaio-com
     restart: unless-stopped
     networks:
       - caddy

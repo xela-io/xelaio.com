@@ -1,6 +1,6 @@
-# over-cloud.de
+# xelaio.com
 
-Minimalistischer Astro-Blog auf https://over-cloud.de
+Minimalistischer Astro-Blog auf https://xelaio.com
 
 ## Tech Stack
 
@@ -56,15 +56,15 @@ Server: `xela@46.224.208.7`
 
 ```bash
 # Dateien auf Server kopieren
-scp -r src public Dockerfile nginx.conf docker-compose.yml package*.json astro.config.mjs tsconfig.json xela@46.224.208.7:~/over-cloud.de/
+scp -r src public Dockerfile nginx.conf docker-compose.yml package*.json astro.config.mjs tsconfig.json xela@46.224.208.7:~/xelaio.com/
 
 # Auf dem Server bauen und starten
-ssh xela@46.224.208.7 "cd ~/over-cloud.de && docker compose build --no-cache && docker compose up -d"
+ssh xela@46.224.208.7 "cd ~/xelaio.com && docker compose build --no-cache && docker compose up -d"
 ```
 
 Der Container verbindet sich automatisch mit dem Caddy-Netzwerk (`matrix_matrix-external`) via docker-compose.yml. Caddy-Config liegt in `/opt/matrix/Caddyfile` auf dem Server.
 
 ## Git
 
-- Repo: `git@github.com:xela-io/over-cloud.de.git`
+- Repo: `git@github.com:xela-io/xelaio.com.git`
 - Branch: `main`

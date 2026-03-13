@@ -6,6 +6,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://over-cloud.de',
+	site: 'https://xelaio.com',
 	integrations: [mdx(), sitemap()],
 });

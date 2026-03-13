@@ -71,6 +71,31 @@ a {
 	text-underline-offset: 2px;
 }
 
+.site-title {
+	color: var(--text);
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+}
+
+.site-title::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	height: 2px;
+	background: var(--accent);
+}
+
+.site-title:hover {
+	color: var(--accent);
+}
+
+.site-title:hover::after {
+	background: var(--accent-hover);
+}
+
 a:hover {
 	color: var(--accent-hover);
 }

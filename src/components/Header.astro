@@ -6,7 +6,7 @@ const pathname = Astro.url.pathname;
 
 <header>
 	<nav>
-		<a href="/" class="site-title">{SITE_NAME}</a>
+		<a href="/" class="site-title" style="text-decoration:none;">{SITE_NAME}</a>
 		<div class="nav-links">
 			<a href="/about" class:list={[{ active: pathname === '/about/' }]}>About</a>
 			<button id="theme-toggle" aria-label="Theme wechseln">
@@ -50,11 +50,6 @@ const pathname = Astro.url.pathname;
 	.site-title {
 		font-weight: 700;
 		font-size: 1.1rem;
-		text-decoration: none;
-		color: var(--text);
-	}
-	.site-title:hover {
-		color: var(--accent);
 	}
 	.nav-links {
 		display: flex;

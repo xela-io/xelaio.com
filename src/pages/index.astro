@@ -27,10 +27,10 @@ function readingTime(body: string): string {
 		<main transition:animate="fade">
 			<ul class="post-list">
 				{
-					posts.map((post) => (
-						<li>
+					posts.map((post, i) => (
+						<li style={`--i:${i}`}>
 							<a href={`/blog/${post.id}/`}>
-								<h2 class="post-title" transition:name={`title-${post.id}`}>{post.data.title}</h2>
+								<h2 class="post-title">{post.data.title}</h2>
 								<p class="post-meta">
 									<FormattedDate date={post.data.pubDate} />
 									<span class="separator">&middot;</span>
@@ -48,6 +48,17 @@ function readingTime(body: string): string {
 </html>
 
 <style is:global>
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
 	.post-list {
 		list-style: none;
 		padding: 0;
@@ -55,28 +66,36 @@ function readingTime(body: string): string {
 	}
 	.post-list li {
 		border-bottom: 1px solid var(--border);
+		animation: fadeInUp 0.4s ease both;
+		animation-delay: calc(var(--i, 0) * 0.08s);
 	}
 	.post-list li:last-child {
 		border-bottom: none;
 	}
 	.post-list a {
 		display: block;
-		padding: 1.5rem 0;
+		padding: 1.5rem 0.75rem;
+		margin: 0 -0.75rem;
 		text-decoration: none;
 		color: var(--text);
+		border-radius: 6px;
+		transition: background 0.15s ease, padding-left 0.2s ease;
 	}
-	.post-list a:hover .post-title {
-		color: var(--accent);
+	.post-list a:hover {
+		background: rgba(111, 143, 114, 0.06);
+		padding-left: 1rem;
 	}
 	.post-title {
 		font-size: 1.3rem;
 		font-weight: 700;
 		margin: 0 0 0.4rem 0;
 		line-height: 1.3;
+		color: var(--orange);
 	}
 	.post-meta {
 		font-size: 0.85rem;
 		color: var(--text-muted);
+		font-style: italic;
 		margin: 0 0 0.5rem 0;
 	}
 	.post-meta .separator {

@@ -5,7 +5,7 @@ const pathname = Astro.url.pathname;
 ---
 
 <header>
-	<nav>
+	<nav class="site-nav" transition:name="header" transition:animate="none">
 		<a href="/" class="site-title" style="text-decoration:none;">{SITE_NAME}</a>
 		<div class="nav-links">
 			<a href="/about" class:list={[{ active: pathname === '/about/' }]}>About</a>
@@ -35,50 +35,3 @@ const pathname = Astro.url.pathname;
 	document.addEventListener('astro:after-swap', initThemeToggle);
 </script>
 
-<style>
-	header {
-		border-bottom: 1px solid var(--border);
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 680px;
-		margin: 0 auto;
-		padding: 1rem;
-	}
-	.site-title {
-		font-weight: 700;
-		font-size: 1.1rem;
-	}
-	.nav-links {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
-	}
-	.nav-links a {
-		text-decoration: none;
-		color: var(--text-muted);
-		font-size: 0.95rem;
-	}
-	.nav-links a:hover,
-	.nav-links a.active {
-		color: var(--text);
-	}
-	#theme-toggle {
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 4px;
-		color: var(--text-muted);
-		display: flex;
-		align-items: center;
-	}
-	#theme-toggle:hover {
-		color: var(--text);
-	}
-	:root[data-theme="dark"] .icon-sun { display: none; }
-	:root[data-theme="dark"] .icon-moon { display: block; }
-	:root:not([data-theme="dark"]) .icon-sun { display: block; }
-	:root:not([data-theme="dark"]) .icon-moon { display: none; }
-</style>

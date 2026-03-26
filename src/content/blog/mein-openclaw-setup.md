@@ -58,6 +58,8 @@ OpenClaw VPS (B-Sisstant)    Coding-Server (Claude Code)
 
 Wenn B-Sisstant eine Entscheidung dokumentiert, kann der Claude-Code-Agent sie sofort lesen. Wenn ich am Handy eine Notiz schreibe, ist sie Sekunden später für alle Agenten verfügbar. Und umgekehrt.
 
+![Knowledge Lifecycle — Wie Wissen durch das System fließt](/openclaw_knowledge_lifecycle.svg)
+
 ### Warum Obsidian Sync?
 
 Git erfordert Commits und Pushes, also Reibung, die ein Agent nicht zuverlässig handhabt. Eine Datenbank wäre ein weiterer Dienst, und ich könnte die Daten nicht einfach am Handy lesen. Obsidian Sync trifft den Sweet Spot: Markdown-Dateien, die jeder Agent direkt lesen und schreiben kann, bidirektionaler Sync mit Conflict-Merge, kein Server-Setup, und jeder Agent hat eine lokale Kopie.

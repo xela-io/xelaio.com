@@ -62,11 +62,11 @@ Wenn B-Sisstant eine Entscheidung dokumentiert, kann der Claude-Code-Agent sie s
 
 Die Grafik zeigt drei Pfade, über die Wissen durch das System fließt:
 
-**Links der Obsidian-Pfad.** Notizen, die ich auf meinen Geräten schreibe, landen per Sync kontinuierlich in `vault-mirror/` auf dem Server. Alle 5 Minuten indexiert QMD den Bestand — das ist das externe Wissen, auf das jeder Agent zugreifen kann.
+**Links der Obsidian-Pfad.** Notizen, die ich auf meinen Geräten schreibe, landen per Sync kontinuierlich in `vault-mirror/` auf dem Server. Alle 5 Minuten indexiert QMD den Bestand. Das ist das externe Wissen, auf das jeder Agent zugreifen kann.
 
-**In der Mitte der Session-Pfad.** Jede Telegram-Konversation wird als JSONL aufgezeichnet. Ein stündlicher Cron-Job konvertiert sie in Markdown-Transkripte, die ebenfalls in den QMD-Index wandern — das Gesprächsgedächtnis des Agenten.
+**In der Mitte der Session-Pfad.** Jede Telegram-Konversation wird als JSONL aufgezeichnet. Ein stündlicher Cron-Job konvertiert sie in Markdown-Transkripte, die ebenfalls in den QMD-Index wandern. Das Gesprächsgedächtnis des Agenten.
 
-**Rechts die Kuratierung.** Während einer Session schreibt der Agent Beobachtungen in `daily-scratch`. Der Heartbeat überführt sie abends in die Daily Notes, und was langfristig wichtig ist, wandert in `MEMORY.md`. Beim nächsten Session-Start wird das direkt als fester Kontext geladen — nicht über die Suche, sondern als Boot-Bestandteil.
+**Rechts die Kuratierung.** Während einer Session schreibt der Agent Beobachtungen in `daily-scratch`. Der Heartbeat überführt sie abends in die Daily Notes, und was langfristig wichtig ist, wandert in `MEMORY.md`. Beim nächsten Session-Start wird das direkt als fester Kontext geladen, nicht über die Suche, sondern als Boot-Bestandteil.
 
 Die gestrichelte Linie rechts schließt die Feedback-Schleife: Was der Agent heute lernt, steht ihm morgen als Kontext zur Verfügung.
 

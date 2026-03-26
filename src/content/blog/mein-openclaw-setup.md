@@ -58,7 +58,7 @@ OpenClaw VPS (B-Sisstant)    Coding-Server (Claude Code)
 
 Wenn B-Sisstant eine Entscheidung dokumentiert, kann der Claude-Code-Agent sie sofort lesen. Wenn ich am Handy eine Notiz schreibe, ist sie Sekunden später für alle Agenten verfügbar. Und umgekehrt.
 
-![Knowledge Lifecycle — Wie Wissen durch das System fließt](/openclaw_knowledge_lifecycle.svg)
+![Knowledge Lifecycle — Wie Wissen durch das System fließt](/openclaw_knowledge_lifecycle_v2.svg)
 
 Die Grafik zeigt drei Pfade, über die Wissen durch das System fließt:
 

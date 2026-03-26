@@ -82,11 +82,20 @@ const { title, description, pubDate, updatedDate, heroImage, id } = Astro.props;
 	.prose {
 		line-height: 1.8;
 	}
+	.prose :global(p) {
+		margin: 0 0 0.75em 0;
+	}
 	.prose :global(h2) {
-		margin-top: 2em;
+		margin-top: 2.2em;
+		margin-bottom: 0.6em;
+		padding-left: 0.6em;
+		border-left: 3px solid var(--accent);
 	}
 	.prose :global(h3) {
-		margin-top: 1.5em;
+		margin-top: 1.6em;
+		margin-bottom: 0.4em;
+		padding-left: 0.6em;
+		border-left: 2px solid var(--border);
 	}
 	.prose :global(a) {
 		color: var(--accent);

@@ -7,13 +7,22 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { id?: string };
 
-const { title, description, pubDate, updatedDate, id } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, id } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="de">
 	<head>
-		<BaseHead title={`${title} - xelaio.com`} description={description} />
+		<BaseHead
+			title={`${title} - xelaio.com`}
+			description={description}
+			image={heroImage}
+			article={{
+				headline: title,
+				publishedTime: pubDate.toISOString(),
+				...(updatedDate && { modifiedTime: updatedDate.toISOString() }),
+			}}
+		/>
 	</head>
 
 	<body>
